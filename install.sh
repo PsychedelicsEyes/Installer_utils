@@ -18,8 +18,9 @@ clear
 
 echo "Update des fichier"
 
-sudo apt-get update -y 
-sudo apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y 
+sudo apt-get dist-upgrade -y
 
 clear
 
@@ -129,7 +130,7 @@ echo "Installation de symfony"
 
 wget https://get.symfony.com/cli/installer -O - | bash
 
-sudo mv /home/psychedelicseyes/.symfony/bin/symfony /usr/local/bin/symfony
+sudo mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
 sudo chmod 755 /
 
