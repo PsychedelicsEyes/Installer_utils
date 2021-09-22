@@ -67,7 +67,6 @@ sudo apt-get update
 
 clear
 
-
 read -p "Voulez vous installer phpmyadmin?:" reponse2
 
 if  [ $reponse2 = "yes" ]||
@@ -96,11 +95,9 @@ sudo service mysql stop
 
 clear
 
-
 else
 
 echo "Chargement de la suite du script"
-
 
 fi
 
@@ -128,17 +125,11 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 clear
 
-
 echo "Installation de symfony"
-
-sudo chmod 777 /
-
-cd /
 
 wget https://get.symfony.com/cli/installer -O - | bash
 
-
-cd 
+sudo mv /home/psychedelicseyes/.symfony/bin/symfony /usr/local/bin/symfony
 
 sudo chmod 755 /
 
@@ -163,10 +154,8 @@ sudo service mysql restart
 
 clear
 
-
 echo "Fin du script"
 echo "Le mot passe root de mysql: $mdpmysql"
-
 
 else 
 
