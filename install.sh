@@ -141,11 +141,48 @@ sudo service mysql start
 
 clear
 
-echo "Changement du mot de passe root mysql"
+read -p "Voulez-vous créez un nouveaux utilisateurs pour mysql avec toute les permissions?(conseillé):" reponse3
 
-read -p "Entrez votre nouveaux mot de passe mysql:" mdpmysql
+if  [ $reponse3 = "yes" ]||
+    [ $reponse3 = "yEs" ]||
+    [ $reponse3 = "YEs" ]||
+    [ $reponse3 = "YES" ]||
+    [ $reponse3 = "yES" ]||
+    [ $reponse3 = "y" ]||
+    [ $reponse3 = "Y" ]||
+    [ $reponse3 = "yeS" ],
+then
 
-echo "Entrez votre mot de passe d'utilisateur"
+read -p "Entrez le nom d'utilisateur:" newuserusername
+
+read -p "Entrez le mot de passe:" newuserpass
+
+sudo mysql -u root -p << EOF
+  CREATE USER '$newuserusername'@'localhost' IDENTIFIED BY '$newuserpass';
+  GRANT ALL PRIVILEGES ON * . * TO '$newuserusername'@'localhost';
+  FLUSH PRIVILEGES;
+EOF
+
+else
+
+echo "Chargement de la suite du script"
+
+fi
+
+read -p "Voulez-vous changez le mot de passe du compte root de mysql:" reponse4
+
+if  [ $reponse4 = "yes" ]||
+    [ $reponse4 = "yEs" ]||
+    [ $reponse4 = "YEs" ]||
+    [ $reponse4 = "YES" ]||
+    [ $reponse4 = "yES" ]||
+    [ $reponse4 = "y" ]||
+    [ $reponse4 = "Y" ]||
+    [ $reponse4 = "yeS" ],
+then
+
+read -p "Entrez le nouveaux mot de passe mysql:" mdpmysql
+
 sudo mysql -u root -p << EOF
   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$mdpmysql';
 EOF
@@ -156,6 +193,12 @@ clear
 
 echo "Fin du script"
 echo "Le mot passe root de mysql: $mdpmysql"
+
+else
+
+echo "Fin du script"
+fi
+
 
 else 
 
