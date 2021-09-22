@@ -164,6 +164,7 @@ sudo mysql -u root -p << EOF
 EOF
 
 else
+clear 
 
 echo "Chargement de la suite du script"
 
@@ -196,9 +197,10 @@ echo "Le mot passe root de mysql: $mdpmysql"
 
 else
 
+clear
+
 echo "Fin du script"
 fi
-
 
 else 
 
