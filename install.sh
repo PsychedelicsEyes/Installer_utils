@@ -99,9 +99,12 @@ clear
 
 else
 
-clear
-
 echo "Chargement de la suite du script"
+
+
+fi
+
+clear
 
 echo "Instalaltion de composer"
 
@@ -164,7 +167,6 @@ clear
 echo "Fin du script"
 echo "Le mot passe root de mysql: $mdpmysql"
 
-fi
 
 else 
 
