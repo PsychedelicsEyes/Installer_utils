@@ -130,7 +130,9 @@ echo "Installation de symfony"
 
 wget https://get.symfony.com/cli/installer -O - | bash
 
-sudo mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+read -p "Entrez votre nom d'utilisateur:" reponse3
+
+sudo mv /$reponse3/.symfony/bin/symfony /usr/local/bin/symfony
 
 sudo chmod 755 /
 
@@ -142,16 +144,16 @@ sudo service mysql start
 
 clear
 
-read -p "Voulez-vous créez un nouveaux utilisateurs pour mysql avec toute les permissions?(conseillé):" reponse3
+read -p "Voulez-vous créez un nouveaux utilisateurs pour mysql avec toute les permissions?(conseillé):" reponse4
 
-if  [ $reponse3 = "yes" ]||
-    [ $reponse3 = "yEs" ]||
-    [ $reponse3 = "YEs" ]||
-    [ $reponse3 = "YES" ]||
-    [ $reponse3 = "yES" ]||
-    [ $reponse3 = "y" ]||
-    [ $reponse3 = "Y" ]||
-    [ $reponse3 = "yeS" ],
+if  [ $reponse4 = "yes" ]||
+    [ $reponse4 = "yEs" ]||
+    [ $reponse4 = "YEs" ]||
+    [ $reponse4 = "YES" ]||
+    [ $reponse4 = "yES" ]||
+    [ $reponse4 = "y" ]||
+    [ $reponse4 = "Y" ]||
+    [ $reponse4 = "yeS" ],
 then
 
 read -p "Entrez le nom d'utilisateur:" newuserusername
@@ -171,16 +173,16 @@ echo "Chargement de la suite du script"
 
 fi
 
-read -p "Voulez-vous changez le mot de passe du compte root de mysql:" reponse4
+read -p "Voulez-vous changez le mot de passe du compte root de mysql:" reponse5
 
-if  [ $reponse4 = "yes" ]||
-    [ $reponse4 = "yEs" ]||
-    [ $reponse4 = "YEs" ]||
-    [ $reponse4 = "YES" ]||
-    [ $reponse4 = "yES" ]||
-    [ $reponse4 = "y" ]||
-    [ $reponse4 = "Y" ]||
-    [ $reponse4 = "yeS" ],
+if  [ $reponse5 = "yes" ]||
+    [ $reponse5 = "yEs" ]||
+    [ $reponse5 = "YEs" ]||
+    [ $reponse5 = "YES" ]||
+    [ $reponse5 = "yES" ]||
+    [ $reponse5 = "y" ]||
+    [ $reponse5 = "Y" ]||
+    [ $reponse5 = "yeS" ],
 then
 
 read -p "Entrez le nouveaux mot de passe mysql:" mdpmysql
