@@ -14,7 +14,7 @@ Install nodejs et npm
 
 Install composer
 
-Install symfony (vous demande juste votre nom d'utilisateur pour le path de symfony)
+Install symfony
 
 Install php
 
