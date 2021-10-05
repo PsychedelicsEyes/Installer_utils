@@ -130,9 +130,7 @@ echo "Installation de symfony"
 
 wget https://get.symfony.com/cli/installer -O - | bash
 
-read -p "Entrez votre nom d'utilisateur:" reponse3
-
-sudo mv /$reponse3/.symfony/bin/symfony /usr/local/bin/symfony
+sudo mv /$USER/.symfony/bin/symfony /usr/local/bin/symfony
 
 sudo chmod 755 /
 
