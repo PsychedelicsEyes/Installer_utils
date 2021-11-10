@@ -22,6 +22,8 @@ Install net tools
 
 Install phpmyadmin (optionel)
 
+Install wordpress (optionel)
+
 Crée un utilisateur mysql avec toute les permissions(optionel)
 
 Changer le mot de passe du compte root de mysql(optionel)
