@@ -6,9 +6,9 @@ Clonez le projet et lancer le .sh et le script seras en marche!
 
 -Fonctionalité du script
 
-Installe apache2
+Install apache2
 
-Installe mysql
+Install mysql
 
 Install nodejs et npm
 
