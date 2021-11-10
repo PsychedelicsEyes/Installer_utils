@@ -168,6 +168,7 @@ tar -xvzf latest.tar.gz
 
 rm -rf latest.tar.gz
 
+cd 
 clear 
 
 else 
