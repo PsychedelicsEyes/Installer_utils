@@ -142,6 +142,42 @@ sudo service mysql start
 
 clear
 
+read -p "Voulez vous installer wordpress?" reponse3
+
+if  [ $reponse3 = "yes" ]||
+    [ $reponse3 = "yEs" ]||
+    [ $reponse3 = "YEs" ]||
+    [ $reponse3 = "YES" ]||
+    [ $reponse3 = "yES" ]||
+    [ $reponse3 = "y" ]||
+    [ $reponse3 = "Y" ]||
+    [ $reponse3 = "yeS" ],
+then
+
+echo "Création de la database"
+sudo mysql -u root -p << EOF
+  create database wordpress;
+EOF
+
+clear
+
+cd var/www/html
+
+wget https://wordpress.org/latest.tar.gz
+tar -xvzf latest.tar.gz
+
+rm -rf latest.tar.gz
+
+clear 
+
+else 
+
+echo "Chargement de la suite du script"
+
+fi
+
+clear
+
 read -p "Voulez-vous créez un nouveaux utilisateurs pour mysql avec toute les permissions?(conseillé):" reponse4
 
 if  [ $reponse4 = "yes" ]||
