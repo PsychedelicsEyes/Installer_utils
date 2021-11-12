@@ -10,7 +10,7 @@ Install apache2
 
 Install mysql
 
-Install nodejs et npm
+Install nvm(node versions manager) et npm
 
 Install composer
 
