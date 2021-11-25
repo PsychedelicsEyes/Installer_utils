@@ -90,7 +90,7 @@ echo Include /etc/phpmyadmin/apache.conf >> /etc/apache2/apache2.conf
 
 sudo chmod -R 755 /etc/apache2/apache2.conf
 
-/etc/init.d/apache2 restart
+sudo /etc/init.d/apache2 restart
 
 sudo service mysql stop
 
