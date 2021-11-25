@@ -130,7 +130,7 @@ echo "Installation de symfony"
 
 wget https://get.symfony.com/cli/installer -O - | bash
 
-sudo mv /$USER/.symfony/bin/symfony /usr/local/bin/symfony
+sudo mv /home/$USER/.symfony/bin/symfony /usr/local/bin/symfony
 
 sudo chmod 755 /
 
