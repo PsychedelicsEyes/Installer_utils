@@ -46,8 +46,9 @@ clear
 
 echo "Installation de nodejs et de npm"
 
-sudo apt install curl && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash && nvm install --lts
 sudo apt install nodejs npm -y
+sudo apt install curl && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash && nvm install --lts
+
 
 clear
 
